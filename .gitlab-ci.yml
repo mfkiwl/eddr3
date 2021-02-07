@@ -1,0 +1,12 @@
+compile_test:
+  tags:
+    - latex3
+  image: tianon/latex
+  variables:
+    CI_DEBUG_TRACE: "false"
+  script:
+    - echo $CI_JOB_ID
+    - echo "test" > artifact.txt
+  artifacts:
+    paths:
+      - artifact.txt
